@@ -28,7 +28,7 @@ bot.on('message', message => {
             .addField("Embed01","Embed 01 ! :) Suiver les tuto de [PHZ CODAGE](https://www.youtube.com/watch?v=K4npw9erw5c)", true)
             .setColor("0x#FF0000")
             .setFooter("Bon moment parmis nous ! :) ")
-        message.channel.sentEmbed(embed);
+        message.channel.sendEmbed(embed);
     
     }
 });
