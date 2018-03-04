@@ -46,7 +46,7 @@ bot.on('message', message => {
         console.log(`Nombre d'xp: ${userxp[1]}`)
 
         db.get("xp").find({user: msgauthor}).assign({user: msgauthor, xp: userxp[1] += 1}).write();
-
+    }
     if(message.content === prefix + "xp"){
         var xp = db.get("xp").filter({user: msgauthor}).find('xp').value()
         var xpfinal = Object.values(xp);
@@ -58,5 +58,5 @@ bot.on('message', message => {
             .setFooter("Enjoy :p")
         message.channel.send({embed: xp_embed});
 
-}}});
+}});
 
