@@ -19,4 +19,16 @@ bot.on('message', message => {
         message.reply("Bien le bonjour. :)");
         console.log("Commande Salut effectuée");
     }
+    
+       if (message.content === prefix + "embed"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("EMBED")
+            .setDescription("Ceci est un embed")
+            .addField(".help","Page d'aide", true)
+            .addField("Embed01","Embed 01 ! :) Suiver les tuto de [PHZ CODAGE](https://www.youtube.com/watch?v=K4npw9erw5c)", true)
+            .setColor("0x#FF0000")
+            .setFooter("Bon moment parmis nous ! :) ")
+        message.channel.sentEmbed(embed);
+    
+    }
 });
